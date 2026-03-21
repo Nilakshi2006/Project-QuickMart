@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickMart-WhyUs</title>
+  <link rel="stylesheet" href="../styles/whyus.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/891/891462.png" type="image/png">
+  <!-- Using Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><a href="index.html">QuickMart</a></div>
+    <ul id="navLink">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#advantages">Why Us</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Signup</a></li>
+         <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Why Choose QuickMart?</h1>
+      <p>We provide top-quality products, unmatched service, and a seamless shopping experience that you can trust.</p>
+      <button class="hero-btn">Shop Now</button>"
+    </div>
+    <div class="hero-image">
+      <img src="https://www.shutterstock.com/image-illustration/why-us-concept-image-text-260nw-1901837788.jpg" alt="Why Us Hero Image">
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <h2 class="section-title" id="advantages">Our Advantages</h2>
+  <div class="why-container">
+    <div class="why-item">
+      <img src="https://img.freepik.com/free-vector/premium-certified-quality-stamp_78370-1800.jpg?w=2000" alt="Premium Quality">
+      <h3>Premium Quality</h3>
+      <p>All products are hand-picked to meet the highest quality standards.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://t3.ftcdn.net/jpg/03/34/97/20/360_F_334972030_hFPmKfjAiN9G8WSXyrvDNosg43fGbJy8.jpg" alt="Fast Delivery">
+      <h3>Fast Delivery</h3>
+      <p>Receive your orders quickly and reliably with our fast shipping partners.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://static.vecteezy.com/system/resources/previews/005/747/712/non_2x/24-hours-customer-service-icon-24-7-support-icon-sign-button-customer-service-icon-vector.jpg" alt="24/7 Support">
+      <h3>24/7 Support</h3>
+      <p>Our support team is always available to help you with your queries.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://img.freepik.com/premium-vector/secure-payment-credit-card-icon-with-shield-secure-transaction-vector-stock-illustration_100456-11326.jpg?w=2000" alt="Secure Payments">
+      <h3>Secure Payments</h3>
+      <p>Shop confidently with our safe and encrypted payment system.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://www.searchenginejournal.com/wp-content/uploads/2023/01/customer-reviews-63d8b1a454172-sej.png" alt="Top Reviews">
+      <h3>Top Reviews</h3>
+      <p>Our customers love us! Read thousands of positive reviews and testimonials.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://st.depositphotos.com/1031343/2895/v/450/depositphotos_28951445-stock-illustration-trusted-brand-stamp.jpg" alt="Trusted Brand">
+      <h3>Trusted Brand</h3>
+      <p>We are a trusted brand with years of experience in providing quality products.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://thumbs.dreamstime.com/b/affordable-prices-text-written-green-black-stamp-sign-grungy-257799079.jpg" alt="Affordable Prices">
+      <h3>Affordable Prices</h3>
+      <p>Get the best value for your money with competitive and transparent pricing.</p>
+    </div>
+    <div class="why-item">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.X5-e6ImPFIZWIh8KOczRggHaGv?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Easy Returns">
+      <h3>Easy Returns</h3>
+      <p>Shop with confidence knowing you can easily return or exchange your products hassle-free.</p>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Experience the MyShop Difference</h2>
+    <p>Join thousands of satisfied customers and make your shopping easier and enjoyable.</p>
+    <button class="cta-btn" id="getStartedBtn">Get Started</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MyShop. All rights reserved.
+  </footer>
+
+  <script src="../scripts/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var getStartedBtn = document.getElementById("getStartedBtn");
+      if (getStartedBtn) {
+        getStartedBtn.addEventListener("click", function() {
+          window.location.href = "signup.html";
+        });
+      }
+    });
+  </script>
+</body>
+</html>

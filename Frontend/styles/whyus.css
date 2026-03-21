@@ -1,0 +1,215 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  height: 70px;
+  background-color: #008080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+#navLink {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#navLink a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#navLink a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 3rem;
+  background: linear-gradient(135deg, #e0f7f7, #ffffff);
+  border-radius: 12px;
+  margin: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.hero-text {
+  max-width: 500px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  color: #008080;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+.hero-btn {
+  background-color: #008080;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.hero-btn:hover {
+  background-color: #006666;
+  transform: scale(1.05);
+}
+.hero-image img {
+  width: 400px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #008080;
+  margin: 3rem 0 2rem;
+}
+
+/* Why Us Section */
+.why-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+.why-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.why-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.why-item h3 {
+  color: #008080;
+  margin: 1rem 0;
+}
+.why-item p {
+  color: #555;
+  font-size: 0.95rem;
+}
+.why-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* For animation, optional: trigger with JS by adding .show-card */
+.why-item {
+  opacity: 1;
+  transform: none;
+}
+.why-item.show-card {
+  opacity: 1;
+  transform: translateY(0);
+  /* Add transition if you're toggling this class with JS */
+}
+
+/* CTA */
+.cta {
+  background: #008080;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 4rem 2rem;
+  border-radius: 12px;
+}
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background-color: white;
+  color: #008080;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.cta-btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #006666;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image img {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  #navLink {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .cta {
+    margin: 2rem 1rem;
+  }
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+}

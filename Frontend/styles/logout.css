@@ -1,0 +1,220 @@
+  /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      height: 70px;
+      background-color: #008080;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo a {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    #navLink {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    #navLink a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    #navLink a:hover {
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+
+    /* Logout Section */
+    .logout-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 140px);
+      padding: 2rem;
+    }
+
+    .logout-container {
+      background: white;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logout-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logout-container h1 {
+      font-size: 2rem;
+      color: #008080;
+      margin-bottom: 1rem;
+    }
+
+    .logout-container p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .user-info {
+      background: linear-gradient(135deg, #e0f7f7, #ffffff);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      border-left: 4px solid #008080;
+    }
+
+    .user-info p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .user-info strong {
+      color: #008080;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #008080;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #006666;
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background-color: #e0f7f7;
+      color: #008080;
+      border: 2px solid #008080;
+    }
+
+    .btn-secondary:hover {
+      background-color: #008080;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background-color: #c82333;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #006666;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      nav {
+        padding: 0 20px;
+      }
+
+      #navLink {
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+      }
+
+      .logout-container {
+        padding: 2rem 1.5rem;
+      }
+
+      .logout-container h1 {
+        font-size: 1.5rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .logged-out-message {
+      display: none;
+    }
+
+    .logged-out-message.show {
+      display: block;
+    }

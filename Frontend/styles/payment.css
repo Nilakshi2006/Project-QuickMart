@@ -1,0 +1,195 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  height: 70px;
+  background-color: #008080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+#navLink {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#navLink a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#navLink a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+body {
+  background: #f6f7fb;
+  color: #333;
+}
+
+.payment-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.user-info, .cart-summary {
+  flex: 1;
+  min-width: 320px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.user-info h2, .cart-summary h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.user-info input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#cart-items {
+  margin-top: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.item-details h4 {
+  font-size: 16px;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 15px;
+  color: #222;
+}
+
+/* Payment methods */
+.payment-methods {
+  margin-top: 40px;
+}
+
+.payment-methods h2 {
+  margin-bottom: 20px;
+}
+
+.methods label {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #ddd;
+}
+
+.methods label:hover {
+  background: #f0f0f0;
+}
+
+.methods img {
+  width: 35px;
+  height: 35px;
+  margin-right: 12px;
+}
+
+#place-order {
+  display: block;
+  width: 100%;
+  background: teal;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background 0.3s;
+}
+
+#place-order:hover {
+  background: teal;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
