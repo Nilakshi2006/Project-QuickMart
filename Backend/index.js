@@ -1,4 +1,4 @@
-require('dotenv').config(); // Load env variables early
+require('dotenv').config({ path: './backend/.env' }); // Load env variables early
 
 const express = require('express');
 const cors = require('cors');
