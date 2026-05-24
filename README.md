@@ -17,32 +17,6 @@ QuickMart is a simple e-commerce web project with a Node.js/Express backend and 
   - `scripts/` - client-side JavaScript for interactivity and API calls
   - `styles/` - page-specific CSS files
 
-  ## Images
-
-  ### HomePage
-  ![HomePage](Images/mart1.png)
-   ![HomePage](Images/mart2.png)
-
-   ### Products
-   ![Products](Images/mart3.png)
-
-   ### Why Us
-   ![Why Us](Images/mart4.png)
- ![Why Us](Images/mart5.png)
-
- ### Login
- ![Login](/Images/mart6.png)
-
- ### Sign Up
- ![Sign Up](/Images/mart7.png)
-
- ### Cart
- ![Cart](/Images/mart8.png)
-
- ### Payment
- ![Payment](/Images/mart9.png)
-  ![Payment](/Images/mart10.png)
-
 ## Features
 
 - User registration and login
@@ -81,6 +55,32 @@ npm run server
 ```
 
 The backend will run at `http://localhost:3000` by default.
+
+ ## Images
+
+  ### HomePage
+  ![HomePage](Images/mart1.png)
+   ![HomePage](Images/mart2.png)
+
+   ### Products
+   ![Products](Images/mart3.png)
+
+   ### Why Us
+   ![Why Us](Images/mart4.png)
+ ![Why Us](Images/mart5.png)
+
+ ### Login
+ ![Login](/Images/mart6.png)
+
+ ### Sign Up
+ ![Sign Up](/Images/mart7.png)
+
+ ### Cart
+ ![Cart](/Images/mart8.png)
+
+ ### Payment
+ ![Payment](/Images/mart9.png)
+  ![Payment](/Images/mart10.png)
 
 ## Frontend
 
