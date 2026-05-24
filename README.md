@@ -17,6 +17,32 @@ QuickMart is a simple e-commerce web project with a Node.js/Express backend and 
   - `scripts/` - client-side JavaScript for interactivity and API calls
   - `styles/` - page-specific CSS files
 
+  ## Images
+
+  ### HomePage
+  ![HomePage](../QuickMart/Images/mart1.png)
+   ![HomePage](../QuickMart/Images/mart2.png)
+
+   ### Products
+   ![Products](../QuickMart/Images/mart3.png)
+
+   ### Why Us
+   ![Why Us](../QuickMart/Images/mart4.png)
+ ![Why Us](../QuickMart/Images/mart5.png)
+
+ ### Login
+ ![Login](../QuickMart/Images/mart6.png)
+
+ ### Sign Up
+ ![Sign Up](../QuickMart/Images/mart7.png)
+
+ ### Cart
+ ![Cart](../QuickMart/Images/mart8.png)
+
+ ### Payment
+ ![Payment](../QuickMart/Images/mart9.png)
+  ![Payment](../QuickMart/Images/mart10.png)
+  
 ## Features
 
 - User registration and login
