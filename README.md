@@ -13,7 +13,14 @@ QuickMart is a simple e-commerce web project with a Node.js/Express backend and 
   - `routes/` - route definitions for orders, products, and users
   - `utils/` - helper utilities
 - `Frontend/`
-  - `src/` - HTML pages for login, signup, products, cart, payment, and other pages
+  - `index.html` - main home page
+  - `login.html` - login page
+  - `signup.html` - signup page
+  - `products.html` - product browsing page
+  - `payment.html` - payment page
+  - `thankyou.html` - order confirmation page
+  - `logout.html` - logout page
+  - `whyus.html` - why choose us page
   - `scripts/` - client-side JavaScript for interactivity and API calls
   - `styles/` - page-specific CSS files
 
@@ -84,18 +91,17 @@ The backend will run at `http://localhost:3000` by default.
 
 ## Frontend
 
-The frontend is static and can be opened directly from the `Frontend/src/` HTML files in a browser, or served by a static file server.
+The frontend is static and can be opened directly from the `Frontend/` HTML files in a browser, or served by a static file server.
 
 Key pages:
-- `Frontend/src/index.html`
-- `Frontend/src/login.html`
-- `Frontend/src/signup.html`
-- `Frontend/src/products.html`
-- `Frontend/src/cart.html`
-- `Frontend/src/payment.html`
-- `Frontend/src/thankyou.html`
-- `Frontend/src/logout.html`
-- `Frontend/src/whyus.html`
+- `Frontend/index.html`
+- `Frontend/login.html`
+- `Frontend/signup.html`
+- `Frontend/products.html`
+- `Frontend/payment.html`
+- `Frontend/thankyou.html`
+- `Frontend/logout.html`
+- `Frontend/whyus.html`
 
 ## API Endpoints
 
