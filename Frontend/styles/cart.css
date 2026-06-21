@@ -196,7 +196,29 @@ header h1 {
     flex-direction: column;
     padding: 1.5rem;
   }
-  #cart-items, #cart-summary {
+  #cart-items,
+  #cart-summary {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0.75rem 1rem;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .cart-item img {
+    width: 100%;
+    height: auto;
+  }
+  .cart-item-details {
+    margin-left: 0;
+  }
+  #buy-now {
     width: 100%;
   }
 }

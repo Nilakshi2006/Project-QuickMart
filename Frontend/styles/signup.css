@@ -203,3 +203,29 @@ footer {
   color: #555;
   font-size: 0.9rem;
 }
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .signup-section {
+    padding: 40px 20px;
+  }
+  .signup-container {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  input, select, .file-input, #btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .signup-container {
+    padding: 24px 16px;
+  }
+  .signup-container h1 {
+    font-size: 1.6rem;
+  }
+  .social-buttons {
+    flex-direction: column;
+  }
+}
