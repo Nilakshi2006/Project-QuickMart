@@ -1,17 +1,92 @@
+/* Global Styles - Master Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar - Laptop/Desktop Style on All Devices */
 nav {
+  height: auto;
+  background-color: #008080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+#navLink {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+#navLink li {
+  white-space: nowrap;
+}
+
+#navLink a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 16px;
   position: relative;
+}
+
+#navLink a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-badge {
+  background-color: #ff4444;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 20px;
+  text-align: center;
 }
 
 .nav-toggle {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 34px;
-  height: 34px;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-toggle span {
@@ -35,56 +110,90 @@ nav {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media screen and (max-width: 900px) {
+/* Responsive - Maintain Laptop Layout on All Devices */
+@media screen and (max-width: 1200px) {
   nav {
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .nav-toggle {
-    display: flex;
+    padding: 12px 40px;
   }
 
   #navLink {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #008080;
-    margin: 0;
-    padding: 1rem 1.25rem;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
-    gap: 1rem;
-    z-index: 999;
+    gap: 25px;
   }
 
-  #navLink.open {
-    display: flex;
+  #navLink a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 12px 30px;
   }
 
-  #navLink li {
+  #navLink {
+    gap: 20px;
+  }
+
+  #navLink a {
+    font-size: 14px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 12px 20px;
+  }
+
+  #navLink {
+    gap: 15px;
+  }
+
+  #navLink a {
+    font-size: 13px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 12px 15px;
+  }
+
+  #navLink {
+    gap: 12px;
+  }
+
+  #navLink a {
+    font-size: 12px;
+  }
+
+  .logo a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 12px 10px;
+  }
+
+  #navLink {
+    gap: 8px;
     width: 100%;
   }
 
   #navLink a {
-    display: block;
-    width: 100%;
-    padding: 0.8rem 0;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .nav-toggle {
-    width: 30px;
-    height: 30px;
+    font-size: 11px;
   }
 
-  #navLink {
-    padding: 0.85rem 1rem;
+  .logo a {
+    font-size: 14px;
   }
 }

@@ -15,39 +15,6 @@ body {
   flex-direction: column;
 }
 
-/* Navbar */
-nav {
-  background-color: #008080;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .logo a {
-  color: #fff;
-  font-size: 1.75rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-nav ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffe600;
-}
-
 .cart-badge {
   background-color: red;
   color: white;
@@ -307,18 +274,6 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
-    align-items: center;
-  }
   .hero {
     padding: 2rem 1rem;
   }

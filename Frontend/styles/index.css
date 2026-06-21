@@ -1,56 +1,3 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background-color: #f9f9f9;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-/* Navbar */
-nav {
-  height: 70px;
-  background-color: #008080;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo a {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-#navLink {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-#navLink a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-#navLink a:hover {
-  text-decoration: underline;
-  transform: scale(1.05);
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -209,9 +156,6 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
-  nav {
-    padding: 0 30px;
-  }
   .hero {
     padding: 3rem 2rem;
   }
@@ -225,12 +169,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
   .hero {
     flex-direction: column;
     text-align: center;
@@ -256,10 +194,6 @@ footer {
   }
   .why-container {
     grid-template-columns: 1fr;
-  }
-  #navLink {
-    gap: 1rem;
-    flex-wrap: wrap;
   }
 }
 
