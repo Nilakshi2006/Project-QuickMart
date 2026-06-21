@@ -33,7 +33,7 @@ form.addEventListener("submit", async (e) => {
   btn.textContent = "Creating Account...";
 
   try {
-    const response = await fetch("http://localhost:3000/api/signup", {
+    const response = await fetch("https://quickmart-backend-rg7d.onrender.com/api/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
