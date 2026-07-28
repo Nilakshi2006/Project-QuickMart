@@ -1,158 +1,320 @@
-/* Hero Section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 3rem;
-  background: linear-gradient(135deg, #e0f7f7, #ffffff);
-  border-radius: 12px;
-  margin: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-.hero-text {
-  max-width: 500px;
-}
-.hero-text h1 {
-  font-size: 3rem;
-  color: #008080;
-  margin-bottom: 1rem;
-}
-.hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-.hero-btn {
-  background-color: #008080;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-.hero-btn:hover {
-  background-color: #006666;
-  transform: scale(1.05);
-}
-.hero-image img {
-  width: 400px;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-.hero-image img:hover {
-  transform: scale(1.05);
+/* ==========================
+   Global Styles
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 
-/* Section Titles */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #008080;
-  margin: 3rem 0 2rem;
+body{
+    background:#f7f9f9;
+    color:#333;
+    overflow-x:hidden;
+    line-height:1.6;
 }
 
-/* Why Us Section */
-.why-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 0 2rem;
-  margin-bottom: 4rem;
-}
-.why-item {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.why-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.why-item h3 {
-  color: #008080;
-  margin: 1rem 0;
-}
-.why-item p {
-  color: #555;
-  font-size: 0.95rem;
-}
-.why-item img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+/* ==========================
+   Hero Section
+========================== */
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:60px;
+    margin:30px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#e0f7f7,#ffffff);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-/* For animation, optional: trigger with JS by adding .show-card */
-.why-item {
-  opacity: 1;
-  transform: none;
-}
-.why-item.show-card {
-  opacity: 1;
-  transform: translateY(0);
-  /* Add transition if you're toggling this class with JS */
+.hero-text{
+    flex:1;
+    min-width:0;
 }
 
-/* CTA */
-.cta {
-  background: #008080;
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-  margin: 4rem 2rem;
-  border-radius: 12px;
-}
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.cta p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-.cta-btn {
-  background-color: white;
-  color: #008080;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.cta-btn:hover {
-  background: #f0f0f0;
-  transform: scale(1.05);
+.hero-text h1{
+    font-size:3rem;
+    color:#008080;
+    margin-bottom:20px;
+    word-wrap:break-word;
 }
 
-/* Footer */
-footer {
-  background-color: #006666;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+.hero-text p{
+    font-size:1.1rem;
+    color:#555;
+    margin-bottom:30px;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-image img {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-  .cta {
-    margin: 2rem 1rem;
-  }
-  .why-container {
-    grid-template-columns: 1fr;
-  }
+.hero-btn{
+    background:#008080;
+    color:#fff;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#006666;
+    transform:translateY(-3px);
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:420px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.03);
+}
+
+/* ==========================
+   Section Title
+========================== */
+
+.section-title{
+    text-align:center;
+    font-size:2.2rem;
+    color:#008080;
+    margin:50px 0 30px;
+}
+
+/* ==========================
+   Why Us
+========================== */
+
+.why-container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-bottom:60px;
+}
+
+.why-item{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.why-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.why-item img{
+    width:140px;
+    height:140px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.why-item h3{
+    color:#008080;
+    margin-bottom:15px;
+}
+
+.why-item p{
+    color:#666;
+    font-size:.95rem;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    padding:60px 30px;
+    background:#008080;
+    color:#fff;
+    text-align:center;
+    border-radius:15px;
+}
+
+.cta h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    margin-bottom:30px;
+    font-size:1.05rem;
+}
+
+.cta-btn{
+    padding:14px 35px;
+    border:none;
+    background:#fff;
+    color:#008080;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    background:#f2f2f2;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    background:#006666;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* ==========================
+   Laptop
+========================== */
+
+@media(max-width:1024px){
+
+.hero{
+    padding:45px;
+    gap:25px;
+}
+
+.hero-text h1{
+    font-size:2.4rem;
+}
+
+.hero-image img{
+    max-width:350px;
+}
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:35px 25px;
+    margin:20px;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero-text h1{
+    font-size:2rem;
+}
+
+.hero-text p{
+    font-size:1rem;
+}
+
+.hero-image{
+    width:100%;
+}
+
+.hero-image img{
+    width:90%;
+    max-width:320px;
+}
+
+.section-title{
+    font-size:1.8rem;
+}
+
+.cta{
+    padding:40px 20px;
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:480px){
+
+.hero{
+    padding:25px 18px;
+    margin:15px;
+}
+
+.hero-text h1{
+    font-size:1.6rem;
+    line-height:1.3;
+}
+
+.hero-text p{
+    font-size:.95rem;
+}
+
+.hero-btn{
+    width:100%;
+    padding:14px;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:260px;
+}
+
+.why-container{
+    width:95%;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.why-item{
+    padding:20px;
+}
+
+.why-item img{
+    width:110px;
+    height:110px;
+}
+
+.cta{
+    width:95%;
+    padding:30px 15px;
+}
+
+.cta h2{
+    font-size:1.5rem;
+}
+
+.cta-btn{
+    width:100%;
+}
+
+footer{
+    font-size:14px;
+}
+
 }

@@ -1,6 +1,6 @@
 
 const allProducts = [
-    { id: "1", name: "Smart Watch", description: "Touchscreen smart watch with heart rate sensor.", price: 1999, category: "Electronics", image: "https://quickee.com/wp-content/uploads/2023/02/amazfit-bip-3-smart-watch-with-5-atm-water-resistance-and-60-sports-modes-blue-digital-o493177038-p593251282-0-202207302203.jpeg" },
+    { id: "1", name: "Smart Watch", description: "Touchscreen smart watch with heart rate sensor.", price: 1999, category: "Electronics", image: "https://tse1.mm.bing.net/th/id/OIP.Od-RsGqn71D8sFi4IFc4mAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" },
 
     { id: "2", name: "Bluetooth Speaker", description: "Waterproof Bluetooth speaker for outdoor fun.", price: 799, category: "Electronics", image: "https://tse3.mm.bing.net/th/id/OIP.h0LuFwaZOEnBiuiTdOye4wHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" },
 
@@ -114,10 +114,25 @@ let cart = JSON.parse(localStorage.getItem("cartData")) || [];
 
 // Page Navigation
 function showPage(page) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(`${page}-page`).classList.add('active');
-    if(page === 'products') renderProductsList(allProducts);
-    if(page === 'cart') renderCart();
+
+    document.querySelectorAll(".page").forEach((p) => {
+        p.classList.remove("active");
+    });
+
+    const selectedPage = document.getElementById(`${page}-page`);
+
+    if (selectedPage) {
+        selectedPage.classList.add("active");
+    }
+
+    if (page === "products") {
+        renderProductsList(allProducts);
+    }
+
+    if (page === "cart") {
+        renderCart();
+    }
+
     updateCartCount();
 }
 
@@ -242,12 +257,33 @@ function checkout(){
 }
 
 // Update cart count
-function updateCartCount(){
-    const count = cart.reduce((acc,i)=>acc+i.quantity,0);
-    document.getElementById("cart-count").textContent=count;
+function updateCartCount() {
+
+    const badge = document.getElementById("cart-count");
+
+    if (!badge) return;
+
+    const count = cart.reduce((total, item) => {
+        return total + item.quantity;
+    }, 0);
+
+    badge.textContent = count;
 }
 
 // Init
 renderFeatured(allProducts);
 updateCartCount();
 showPage('home');
+const cartBtn = document.getElementById("cartBtn");
+
+if (cartBtn) {
+
+    cartBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        showPage("cart");
+
+    });
+
+}

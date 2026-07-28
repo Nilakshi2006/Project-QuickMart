@@ -4,97 +4,231 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuickMart - Products</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/891/891462.png" type="image/png">
+
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/891/891462.png" type="image/png">
+
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/products.css">
 </head>
+
 <body>
+
   <!-- Navbar -->
   <nav>
-    <div class="logo"><a href="index.html">QuickMart</a></div>
+
+    <div class="logo">
+      <a href="index.html">QuickMart</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
+
+    <!-- Navigation Links -->
     <ul id="navLink">
+
       <li><a href="index.html">Home</a></li>
+
       <li><a href="products.html">Products</a></li>
+
       <li><a href="whyus.html">Why Us</a></li>
+
       <li><a href="login.html">Login</a></li>
+
       <li><a href="signup.html">Signup</a></li>
+
       <li><a href="logout.html">Logout</a></li>
-      <li><a href="#" onclick="showPage('cart'); return false;" class="cart-link">🛒 Cart<span id="cart-count" class="cart-badge">0</span></a></li>
+
+      <li>
+        <a href="#" id="cartBtn" class="cart-link">
+          🛒 Cart
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </li>
+
     </ul>
+
   </nav>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <main class="main">
+
     <!-- Home -->
     <div id="home-page" class="page active">
+
       <section class="hero">
         <h2 class="hero-title">Welcome to QuickMart</h2>
-        <p class="hero-subtitle">Discover amazing products at great prices</p>
-        <button class="btn btn-primary" onclick="showPage('products')">Shop Now</button>
+
+        <p class="hero-subtitle">
+          Discover amazing products at great prices
+        </p>
+
+        <button
+          class="btn btn-primary"
+          onclick="showPage('products')">
+          Shop Now
+        </button>
+
       </section>
+
       <section class="featured-section">
-        <h2 class="section-title">Featured Products</h2>
-        <div id="featured-products" class="products-grid"></div>
-      </section>
-    </div>
 
-    <!-- Products Page -->
-    <div id="products-page" class="page">
-      <h2 class="page-title">All Products</h2>
+        <h2 class="section-title">
+          Featured Products
+        </h2>
 
-      <!-- 🔍 Search Bar -->
-      <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search for products..." onkeyup="filterProducts()">
-        <button class="btn btn-secondary" onclick="filterProducts()">Search</button>
-      </div>
-
-      <div id="products-list" class="products-grid"></div>
-    </div>
-
-    <!-- Cart Page -->
-    <div id="cart-page" class="page">
-      <h2 class="page-title">Shopping Cart</h2>
-      <div class="cart-container">
-        <div id="cart-items" class="cart-items"></div>
-        <div class="cart-summary">
-          <h3>Order Summary</h3>
-          <div class="summary-row"><span>Subtotal:</span> <span id="cart-subtotal">₹0.00</span></div>
-          <div class="summary-row"><span>Shipping:</span> <span>₹10.00</span></div>
-          <div class="summary-row total"><span>Total:</span> <span id="cart-total">₹10.00</span></div>
-          <button class="btn btn-primary btn-block" onclick="checkout()">Proceed to Checkout</button>
+        <div
+          id="featured-products"
+          class="products-grid">
         </div>
-      </div>
+
+      </section>
+
     </div>
+
+    <!-- Products -->
+    <div id="products-page" class="page">
+
+      <h2 class="page-title">
+        All Products
+      </h2>
+
+      <div class="search-container">
+
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for products..."
+          onkeyup="filterProducts()">
+
+        <button
+          class="btn btn-secondary"
+          onclick="filterProducts()">
+
+          Search
+
+        </button>
+
+      </div>
+
+      <div
+        id="products-list"
+        class="products-grid">
+      </div>
+
+    </div>
+
+    <!-- Cart -->
+    <div id="cart-page" class="page">
+
+      <h2 class="page-title">
+        Shopping Cart
+      </h2>
+
+      <div class="cart-container">
+
+        <div
+          id="cart-items"
+          class="cart-items">
+        </div>
+
+        <div class="cart-summary">
+
+          <h3>Order Summary</h3>
+
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping:</span>
+            <span>₹10.00</span>
+          </div>
+
+          <div class="summary-row total">
+            <span>Total:</span>
+            <span id="cart-total">₹10.00</span>
+          </div>
+
+          <button
+            class="btn btn-primary btn-block"
+            onclick="checkout()">
+
+            Proceed to Checkout
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 QuickMart. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="scripts/navbar.js"></script>
   <script src="scripts/products.js"></script>
+
   <script>
-    // 🔍 Product Search Function
-    function filterProducts() {
-      const input = document.getElementById('search-input').value.toLowerCase();
-      const products = document.querySelectorAll('#products-list .product-card');
 
-      products.forEach(product => {
-        const name = product.querySelector('.product-name').textContent.toLowerCase();
-        const desc = product.querySelector('.product-description').textContent.toLowerCase();
+    // Cart Button
 
-        if (name.includes(input) || desc.includes(input)) {
-          product.style.display = 'block';
-        } else {
-          product.style.display = 'none';
-        }
+  document.addEventListener("DOMContentLoaded", () => {
+
+    document.getElementById("cartBtn").addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        showPage("cart");
+
+    });
+
+});
+
+
+    // Search Products
+
+    function filterProducts(){
+
+      const input = document
+        .getElementById("search-input")
+        .value
+        .toLowerCase();
+
+      const products = document.querySelectorAll(
+        "#products-list .product-card"
+      );
+
+      products.forEach(product=>{
+
+        const name = product.querySelector(".product-name")
+        .textContent
+        .toLowerCase();
+
+        const desc = product.querySelector(".product-description")
+        .textContent
+        .toLowerCase();
+
+        product.style.display =
+          name.includes(input) || desc.includes(input)
+          ? "block"
+          : "none";
+
       });
+
     }
+
   </script>
+
 </body>
 </html>
